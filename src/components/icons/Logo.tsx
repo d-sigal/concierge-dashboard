@@ -1,0 +1,14 @@
+import type { SVGProps } from 'react';
+
+/** Neutral placeholder mark: a speech bubble with a spark. Replace with your own logo. */
+const Logo = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" {...props}>
+    <path
+      d="M6 4h20a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H14l-6.4 4.8A1 1 0 0 1 6 28v-4a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4Z"
+      fill="currentColor"
+    />
+    <path d="m16 8 1.5 3.5L21 13l-3.5 1.5L16 18l-1.5-3.5L11 13l3.5-1.5L16 8Z" fill="white" />
+  </svg>
+);
+
+export default Logo;

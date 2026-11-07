@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary-100 text-basic;
+  }
+
+  /*
+     * Theme. Values are space-separated RGB channels so Tailwind opacity
+     * modifiers (e.g. bg-brand-500/50) keep working. Change these to rebrand.
+     */
+  :root {
+    --radius: 0.5rem;
+
+    --primary: 31 42 68;
+    --primary-100: 246 247 249;
+    --primary-200: 244 245 248;
+    --primary-400: 232 234 239;
+    --primary-500: 229 231 236;
+    --primary-600: 201 205 214;
+    --primary-650: 166 172 185;
+    --primary-700: 131 138 154;
+    --primary-800: 90 97 112;
+
+    --brand-50: 245 246 253;
+    --brand-100: 232 235 250;
+    --brand-200: 211 217 245;
+    --brand-300: 180 190 236;
+    --brand-400: 135 150 222;
+    --brand-500: 91 110 207;
+    --brand-600: 69 88 194;
+    --brand-700: 59 79 184;
+    --brand-800: 47 63 147;
+    --brand-900: 35 47 110;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  small {
+    @apply text-[10px];
+  }
+}
+
+.dashboard-main-layout {
+  @apply flex h-screen flex-col lg:grid lg:grid-cols-[72px_1fr] lg:grid-rows-[64px_1fr] lg:gap-x-4;
+}
+
+.sidebar {
+  @apply hidden bg-white px-2 md:h-full md:flex-col md:pb-4 lg:flex;
+}
+
+#sign-in .cl-rootBox {
+  @apply mx-auto font-secondary;
+}
+
+#sign-in .cl-card {
+  @apply rounded-none px-2 py-8;
+}
+
+#sign-in .cl-cardBox {
+  @apply w-[26rem] shadow-none;
+}
+
+#sign-in .cl-footer {
+  background: #fff;
+}
+
+#sign-in .cl-footerAction + div,
+#sign-in .cl-buttonArrowIcon {
+  @apply hidden;
+}
+
+#sign-in .cl-header {
+  @apply text-left;
+}
+
+#sign-in .cl-logoBox {
+  @apply justify-start;
+}
+
+#sign-in .cl-headerTitle {
+  @apply mb-2 text-2xl font-medium;
+}
+
+#sign-in .cl-headerSubtitle {
+  @apply text-base text-black;
+}
+
+#sign-in .cl-formButtonPrimary {
+  @apply py-2.5 text-sm shadow-none;
+}
+
+#sign-in .cl-formButtonPrimary::after {
+  @apply hidden;
+}
+
+#sign-in .cl-formFieldInput {
+  @apply py-6 text-base;
+}
+
+#sign-in .cl-formFieldLabel {
+  @apply text-sm font-normal;
+}
+
+#sign-in .cl-footerActionText,
+#sign-in .cl-footerActionLink {
+  @apply text-base;
+}
+
+#sign-in .cl-footerAction {
+  @apply ml-0 px-0;
+}
+
+#sign-in .cl-footerActionText {
+  @apply text-black;
+}
+
+#sign-in .cl-otpCodeFieldInput {
+  @apply h-12 w-14 py-6 font-normal;
+}
+
+#sign-in .cl-otpCodeFieldInputs {
+  @apply gap-x-3;
+}
+
+#sign-in .cl-identityPreview {
+  @apply justify-start;
+}
+
+#sign-in .cl-identityPreviewText {
+  @apply text-base text-black;
+}
+
+#sign-in .cl-footer *[class^='cl-internal-'] {
+  @apply hidden;
+}
+
+#sign-in .cl-formFieldLabel__username-field {
+  @apply invisible;
+}
+#sign-in .cl-formFieldLabel__username-field::before {
+  @apply visible;
+  content: 'Business name';
+}
+
+.group .item {
+  @apply hidden;
+}
+
+.toast-success {
+  @apply ml-auto max-w-[277px] border border-strokes-success p-3 shadow-[0_4px_14px_#0E19272B];
+}
+
+.toast-success .toast-close {
+  @apply hidden;
+}
+
+.toast-success .toast-title {
+  @apply mb-0;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  @apply w-1;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  @apply rounded bg-basic/20;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.PhoneInput {
+  @apply rounded-lg border border-brand-300 text-gray-500 transition-all focus-within:border-brand-500 hover:border-brand-400 has-[:disabled]:border-gray-200 has-[:disabled]:bg-gray-50 has-[:disabled]:text-gray-500;
+}
+
+.PhoneInput .flag-wrapper {
+  @apply relative z-20 before:absolute before:right-0 before:h-5 before:w-px before:bg-gray-200 before:content-[''] has-[:disabled]:before:hidden;
+}
+
+.PhoneInput.error {
+  @apply border-red-400;
+}
+
+input[type='time']::-webkit-calendar-picker-indicator {
+  @apply hidden;
+}
+
+.epr-search-container input {
+  @apply border border-brand-300 bg-transparent focus-within:border-brand-500 hover:border-brand-400 !important;
+}
+
+.epr-emoji-category-label {
+  @apply text-sm font-normal !important;
+}
+
+.epr-btn:hover {
+  @apply bg-gray-100 !important;
+}
